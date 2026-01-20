@@ -26,6 +26,8 @@
         "base_company_legal_info",
         # CoopITeasy
         "account_customer_wallet",
+        # Mollie https://github.com/mollie/mollie-odoo
+        "payment_mollie_official",
     ],
     "data": [
         "security/ir_rule.xml",

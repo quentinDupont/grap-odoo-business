@@ -12,6 +12,7 @@ class SaleOrder(models.Model):
     _name = "sale.order"
     _inherit = ["sale.order", "eshop.mixin"]
 
+    eshop_sale = fields.Boolean()
     eshop_note = fields.Char(help="Field set by eshop user during cart validation")
 
     recovery_name = fields.Char(
@@ -27,6 +28,7 @@ class SaleOrder(models.Model):
         "amount_total",
         "note",
         "name",
+        "eshop_sale",
         "eshop_note",
         "amount_untaxed",
         "amount_tax",
@@ -123,6 +125,7 @@ class SaleOrder(models.Model):
                     "partner_invoice_id": partner_id,
                     "partner_shipping_id": partner_id,
                     "pricelist_id": pricelist_id,
+                    "eshop_sale": True,
                 }
             )
 

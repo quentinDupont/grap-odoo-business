@@ -41,4 +41,7 @@ class AccountMove(http.Controller):
             .create(wizard_vals)
         )
 
+        # Marks the link with a parameter to differentiate sale_eshop sales
+        wizard.link += "&sale_eshop=True"
+
         return {"payment_url": wizard.link}

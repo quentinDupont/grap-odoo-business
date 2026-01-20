@@ -5,6 +5,7 @@ from . import account_tax
 from . import account_move
 from . import eshop_category
 from . import eshop_fake_account
+from . import payment_transaction
 from . import product_label
 from . import product_product
 from . import product_template
